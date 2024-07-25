@@ -13,7 +13,7 @@ def get_int(fetched_item):
     return integer_fetched
 
 # Load movie_ids from file
-with open('horror_movies.txt', 'r') as horrorlist:
+with open('all_movies.txt', 'r') as horrorlist:
     movie_ids = [line.strip() for line in horrorlist]
 
 my_dict = {}
@@ -56,7 +56,7 @@ for i in movie_ids:
 
                 if len(reviews_data) > 0:
 
-                    with open('movies_ratings_reviews.json', 'w') as json_file:
+                    with open('all_movies_ratings_reviews.json', 'w') as json_file:
                         json.dump(my_dict, json_file)
                     print(len(reviews_data))
 
